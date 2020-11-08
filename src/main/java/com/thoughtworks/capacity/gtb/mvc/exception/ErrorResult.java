@@ -10,7 +10,12 @@ public class ErrorResult {
     private String message;
 
     //mac Lombok引入老没反应
+    public ErrorResult() {
+    }
+
     public ErrorResult(String message, int code) {
+        this.message = message;
+        this.code = code;
     }
 
     public int getCode() {

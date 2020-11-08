@@ -19,11 +19,11 @@ public class UserService {
     }
 
     public void registerUser(User user) {
-        if((user.getUsername()==null)){
-            throw new UserNameAndPasswordIsNullException("用户名不为空");
-        }else if(user.getPassword()==null) {
-            throw new UserNameAndPasswordIsNullException("密码不为空");
-        }
+//        if((user.getUsername()==null)){
+//            throw new UserNameAndPasswordIsNullException("用户名不为空");
+//        }else if(user.getPassword()==null) {
+//            throw new UserNameAndPasswordIsNullException("密码不为空");
+//        }
         for(int i=0 ;i< userMap.size();i++){
             if(userMap.get(i).getUsername()==user.getUsername()) {
                 throw new UserIsExistException("用户已存在");

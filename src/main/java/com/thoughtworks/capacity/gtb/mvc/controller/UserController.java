@@ -1,4 +1,4 @@
-package com.thoughtworks.capacity.gtb.mvc.service;
+package com.thoughtworks.capacity.gtb.mvc.controller;
 
 
 import com.thoughtworks.capacity.gtb.mvc.domain.User;
@@ -8,8 +8,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
 @RestController
 @Validated
@@ -31,4 +29,5 @@ public class UserController {
     public User login(String username, String password) {
         return userService.userLogin(username, password);
     }
+    
 }
